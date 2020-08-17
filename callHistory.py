@@ -13,10 +13,11 @@ os.makedirs('public_mobile',exist_ok=True) #makes public mobile folder
 
 publicSite = 'https://selfserve.publicmobile.ca/'
 browser = webdriver.Firefox()
-#browser = webdriver.Chrome(executable_path='LOCATION OF WEBDRIVER')
 browser.get(publicSite)
+
 print('Please input username and password on web page then press enter')
 input()
+
 # Find End date of current period
 homepage = browser.page_source
 filename = os.path.join(os.getcwd(),'public_mobile',('homepage'+'.html')) # creates files for homepage
